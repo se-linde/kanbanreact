@@ -1,10 +1,9 @@
 import express from "express";
 import cors from "cors";
-import bodyparser from "body-parser";
 import bodyParser from "body-parser";
 import { connectDB } from "./connect-db";
-import { authenticationRoute } from "./authenticate";
 import "./initialize-db";
+import { authenticationRoute } from "./authenticate";
 
 let port = 8888;
 let app = express();
@@ -33,7 +32,7 @@ export const updateTask = async (task) => {
   let collection = db.collection(`tasks`);
 
   if (group) {
-    await collection.updateOne({ id }, { $set: { name } });
+    await collection.updateOne({ id }, { $set: { group } });
   }
 
   if (name) {
