@@ -22,7 +22,7 @@
   "author": "Dwayne Linde",
   "license": "MIT",
   "dependencies": {
-    "axios": "0.19.2",
+    "axios": "0.21.1",
     "history": "5.0.0",
     "md5": "2.2.1",
     "react": "16.13.1",
